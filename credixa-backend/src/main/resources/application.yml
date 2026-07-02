@@ -1,0 +1,49 @@
+server:
+  port: 8082
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/credixa_dev?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: isha@2004
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: false
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${MAIL_USERNAME:jaydarji938@gmail.com}
+    password: ${MAIL_PASSWORD:slzovgqhhsjbvdns}
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+      mail.smtp.starttls.required: true
+      mail.debug: true
+  profiles:
+    active: dev
+
+jwt:
+  secret: credixa-super-secret-key-for-jwt-signing-must-be-256-bits-long
+  access-token-expiry: 86400000
+  refresh-token-expiry: 604800000
+
+app:
+  frontend-url: http://localhost:5173
+  otp-expiry-minutes: 15
+
+twilio:
+  account-sid: ${TWILIO_ACCOUNT_SID:}
+  auth-token: ${TWILIO_AUTH_TOKEN:}
+  phone-number: ${TWILIO_PHONE_NUMBER:}
+
+logging:
+  level:
+    com.credixa: DEBUG
+    org.springframework.security: INFO

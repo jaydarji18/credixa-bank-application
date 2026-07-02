@@ -1,1 +1,17 @@
 **/mockup/
+**/diagrams/
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Build output
+target/
+
+# Environment-specific configuration
+application-dev.yml
+application-prod.yml
+
+# IntelliJ IDEA
+.idea/

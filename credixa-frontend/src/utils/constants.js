@@ -1,0 +1,39 @@
+export const APP_NAME = 'Credixa Pro';
+export const APP_VERSION = '1.0.0';
+
+export const ACCOUNT_TYPES = {
+  SAVINGS: 'SAVINGS',
+  CHECKING: 'CHECKING',
+  LOAN: 'LOAN',
+  INVESTMENT: 'INVESTMENT'
+};
+
+export const TRANSACTION_STATUS = {
+  PENDING: 'PENDING',
+  SUCCESS: 'SUCCESS',
+  FAILED: 'FAILED',
+  CANCELLED: 'CANCELLED'
+};
+
+export const TRANSACTION_TYPES = {
+  DEPOSIT: 'DEPOSIT',
+  WITHDRAWAL: 'WITHDRAWAL',
+  TRANSFER: 'TRANSFER',
+  FEE: 'FEE',
+  INTEREST: 'INTEREST'
+};
+
+export const LOAN_STATUS = {
+  PENDING: 'PENDING',
+  APPROVED: 'APPROVED',
+  REJECTED: 'REJECTED',
+  PAID: 'PAID',
+  OVERDUE: 'OVERDUE'
+};
+
+export const STORAGE_KEYS = {
+  ACCESS_TOKEN: 'accessToken',
+  REFRESH_TOKEN: 'refreshToken',
+  USER: 'user',
+  THEME: 'theme'
+};
