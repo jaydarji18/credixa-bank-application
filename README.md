@@ -1,28 +1,30 @@
 # Credixa Pro
 
-A modern digital banking platform with real-time transactions, loan management, and administrative dashboard.
+A modern digital banking platform with real-time transactions, loan management, and an administrative dashboard.
 
-
+---
 
 ## Features
 
 ### Frontend
-- **Authentication**: JWT-based auth with protected routes, OTP verification, password reset flow
-- **Dashboard**: Real-time balance overview, spending analytics, quick actions
+- **Authentication**: JWT-based authentication with protected routes, OTP verification, and password reset flow
+- **Dashboard**: Real-time balance overview, spending analytics, and quick actions
 - **Accounts**: Multi-account support (Savings, Current, Fixed Deposit)
-- **Transactions**: Deposit, withdrawal, fund transfer with history and filtering
-- **Beneficiaries**: Save/pay recurring recipients with verification
-- **Loans**: Product browsing, EMI calculator, application tracking
-- **Notifications**: Real-time alerts via WebSocket
-- **Admin Panel**: User management, transaction monitoring, system stats
-- **UI/UX**: Dark mode, skeleton loaders, custom toast notifications, responsive design
+- **Transactions**: Deposit, withdrawal, fund transfer, transaction history, and filtering
+- **Beneficiaries**: Save and manage recurring recipients with verification
+- **Loans**: Loan product browsing, EMI calculator, and application tracking
+- **Notifications**: Real-time alerts using WebSocket
+- **Admin Panel**: User management, transaction monitoring, and system statistics
+- **UI/UX**: Dark mode, responsive design, skeleton loaders, and custom toast notifications
 
 ### Backend
-- **Security**: Spring Security + JWT, role-based access control, 2FA support, account lockout
-- **Core**: ACID transactions, fund transfer with rollback, multi-threaded processing
-- **Performance**: Redis caching, connection pooling, pagination & sorting
-- **Events**: Kafka for notifications, email/SMS simulation
-- **API**: Swagger documentation, centralized error handling
+- **Security**: Spring Security, JWT Authentication, Role-Based Access Control (RBAC), 2FA support, account lockout protection
+- **Core Banking**: ACID-compliant transactions, secure fund transfer with rollback support
+- **Performance**: Redis caching, connection pooling, pagination, and sorting
+- **Messaging**: Kafka-based notification events with email/SMS simulation
+- **API**: Swagger/OpenAPI documentation and centralized exception handling
+
+---
 
 ## Tech Stack
 
@@ -31,34 +33,39 @@ A modern digital banking platform with real-time transactions, loan management, 
 | **Frontend** | React 19, Vite, Redux Toolkit, Tailwind CSS, Recharts, Framer Motion |
 | **Backend** | Spring Boot, MySQL, Redis, Kafka, JWT |
 | **Real-time** | STOMP WebSocket, SockJS |
-| **Deployment** | Docker-ready |
+| **Deployment** | Docker Ready |
+
+---
 
 ## Project Structure
 
-```
+```text
 credixa-bank-application/
 ├── credixa-frontend/
 │   ├── src/
-│   │   ├── api/              # Axios instance & endpoints
-│   │   ├── components/       # UI components & layouts
-│   │   ├── hooks/            # Custom hooks (Auth, WebSocket, Toast)
-│   │   ├── pages/            # Route pages (auth, dashboard, loans, etc.)
-│   │   ├── store/            # Redux slices & thunks
-│   │   ├── utils/            # Helpers & validators
-│   │   └── main.jsx          # App entry point
+│   │   ├── api/
+│   │   ├── components/
+│   │   ├── hooks/
+│   │   ├── pages/
+│   │   ├── store/
+│   │   ├── utils/
+│   │   └── main.jsx
 │   ├── public/
 │   └── package.json
 └── mockup/
-    ├── API design.html       # REST API documentation
-    ├── SQL script.sql        # Database schema
-    └── System design.txt     # Architecture overview
+    ├── API design.html
+    ├── SQL script.sql
+    └── System design.txt
 ```
+
+---
 
 ## Getting Started
 
 ### Prerequisites
+
 - Node.js 20+
-- npm or yarn
+- npm or Yarn
 
 ### Installation
 
@@ -70,103 +77,160 @@ npm install
 ### Development
 
 ```bash
-npm run dev      # Start dev server (Vite)
-npm run build    # Production build
+npm run dev      # Start development server
+npm run build    # Build production bundle
 npm run lint     # Run ESLint
 npm run preview  # Preview production build
 ```
 
-## UI Screenshots
+---
 
-### Authentication
-| Login | Registration | Forgot Password |
-|-------|--------------|-----------------|
-| ![Login Screen](credixa-frontend/src/assets/screenshots/login.png) | *(Register screenshot pending)* | *(Forgot Password screenshot pending)* |
+# UI Screenshots
 
-### Dashboard
-![Dashboard Overview](credixa-frontend/src/assets/screenshots/dashboard%201.2.png)
+## Login
 
-### Accounts & Transactions
-| Accounts | Transfer | Transaction History |
-|----------|----------|---------------------|
-| ![Accounts](credixa-frontend/src/assets/screenshots/account%201.1.png) | ![Transfer](credixa-frontend/src/assets/screenshots/transfer%201.4.png) | ![Transactions](credixa-frontend/src/assets/screenshots/transaction%201.2.png) |
+![Login](credixa-frontend/src/assets/screenshots/login.png)
 
-### Loans
-![Loans & EMI Calculator](credixa-frontend/src/assets/screenshots/loan%201.3.png)
+---
 
-### Admin Panel
-| Main Dashboard | Add User | Branch Management | Loan Management |
-|----------------|----------|-----------------|---------------|
-| ![Admin Dashboard](credixa-frontend/src/assets/screenshots/admin%201.1.png) | ![Admin Add User](credixa-frontend/src/assets/screenshots/admin%201.1%20add%20user.png) | ![Branch Management](credixa-frontend/src/assets/screenshots/admin%201.3%20branch.png) | ![Loan Management](credixa-frontend/src/assets/screenshots/admin%201.4%20loan%20.png) |
+## Dashboard
+
+![Dashboard](credixa-frontend/src/assets/screenshots/dashboard%201.2.png)
+
+---
+
+## Account
+
+![Account](credixa-frontend/src/assets/screenshots/account%201.1.png)
+
+---
+
+## Transfer
+
+![Transfer](credixa-frontend/src/assets/screenshots/transfer%201.4.png)
+
+---
+
+## Transactions
+
+![Transactions](credixa-frontend/src/assets/screenshots/transaction%201.1.png)
+
+---
+
+## Loan
+
+![Loan](credixa-frontend/src/assets/screenshots/loan%201.3.png)
+
+---
+
+# Admin
+
+## Admin Dashboard
+
+![Admin Dashboard](credixa-frontend/src/assets/screenshots/admin%201.1.png)
+
+---
+
+## User Management
+
+![User Management](credixa-frontend/src/assets/screenshots/admin%201.1%20add%20user.png)
+
+---
+
+## Branch Management
+
+![Branch Management](credixa-frontend/src/assets/screenshots/admin%201.3%20branch.png)
+
+---
+
+## Loan Management
+
+![Loan Management](credixa-frontend/src/assets/screenshots/admin%201.4%20loan%20.png)
+
+---
 
 ## API Endpoints
 
-Base URL: `/api/v1`
+Base URL:
+
+```text
+/api/v1
+```
 
 ### Authentication
+
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| POST | `/auth/register` | Register new user |
-| POST | `/auth/login` | Authenticate & get JWT |
-| POST | `/auth/verify-otp` | Verify email/phone OTP |
+| POST | `/auth/register` | Register a new user |
+| POST | `/auth/login` | Authenticate and receive JWT |
+| POST | `/auth/verify-otp` | Verify OTP |
 | POST | `/auth/forgot-password` | Send password reset OTP |
-| POST | `/auth/reset-password` | Reset with OTP |
-| POST | `/auth/logout` | Invalidate token |
-| PATCH | `/auth/2fa` | Toggle 2FA settings |
+| POST | `/auth/reset-password` | Reset password using OTP |
+| POST | `/auth/logout` | Logout user |
+| PATCH | `/auth/2fa` | Enable/Disable Two-Factor Authentication |
 
 ### Accounts
+
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| GET | `/accounts` | List user accounts |
+| GET | `/accounts` | Get all user accounts |
 | GET | `/accounts/{id}` | Get account details |
-| GET | `/accounts/{id}/balance` | Balance inquiry |
-| GET | `/accounts/summary` | Dashboard summary |
+| GET | `/accounts/{id}/balance` | Get account balance |
+| GET | `/accounts/summary` | Dashboard account summary |
 
 ### Transactions
+
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | GET | `/transactions` | Transaction history |
 | POST | `/transactions/deposit` | Deposit funds |
 | POST | `/transactions/withdraw` | Withdraw funds |
 | POST | `/transactions/transfer` | Transfer money |
-| GET | `/transactions/statement` | Download statement |
+| GET | `/transactions/statement` | Download account statement |
 
 ### Loans
+
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | GET | `/loan-products` | Available loan products |
-| GET | `/loans` | User's active loans |
+| GET | `/loans` | User loans |
 | POST | `/loans/apply` | Apply for loan |
 | GET | `/loans/emi-calculator` | EMI calculator |
 
 ### Admin
+
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | GET | `/admin/users` | List all users |
-| PATCH | `/admin/users/{id}/status` | Block/unblock user |
+| PATCH | `/admin/users/{id}/status` | Block/Unblock user |
 | PATCH | `/admin/users/{id}/kyc` | Update KYC status |
 | GET | `/admin/stats` | System statistics |
-| GET | `/admin/transactions` | All transactions |
+| GET | `/admin/transactions` | View all transactions |
 
-See [API design.html](mockup/API%20design.html) for complete documentation.
+See **mockup/API design.html** for complete API documentation.
+
+---
 
 ## Database Schema
 
-The database schema includes:
-- `users` - Customer accounts with KYC status
-- `admin_users` - Bank staff with role-based access
-- `accounts` - Savings, Current, FD accounts
-- `beneficiaries` - Saved transfer recipients
-- `transactions` - All financial transactions
-- `loan_products` - Available loan types
-- `loans` - Customer loan applications
-- `notifications` - User alerts
+The database includes the following tables:
 
-See [SQL script.sql](mockup/SQL%20script.sql) for full schema.
+- `users`
+- `admin_users`
+- `accounts`
+- `beneficiaries`
+- `transactions`
+- `loan_products`
+- `loans`
+- `notifications`
+
+See **mockup/SQL script.sql** for the complete database schema.
+
+---
 
 ## Environment Variables
 
-Create `.env` in `credixa-frontend/`:
+Create a `.env` file inside `credixa-frontend/`.
 
 ```env
 VITE_API_BASE_URL=https://api.credixa.in/api/v1
