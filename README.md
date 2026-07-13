@@ -2,7 +2,7 @@
 
 A modern digital banking platform with real-time transactions, loan management, and administrative dashboard.
 
-![Credixa Pro Banner](credixa-frontend/src/assets/hero.png)
+
 
 ## Features
 
@@ -172,7 +172,3 @@ Create `.env` in `credixa-frontend/`:
 VITE_API_BASE_URL=https://api.credixa.in/api/v1
 VITE_WS_URL=wss://api.credixa.in/ws
 ```
-
-## License
-
-MIT License
