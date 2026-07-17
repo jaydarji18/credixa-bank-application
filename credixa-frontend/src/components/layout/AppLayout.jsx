@@ -4,7 +4,6 @@ import { Outlet } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import TopBar from './TopBar';
 import SpinModal from '../common/SpinModal';
-import { useWebSocket } from '../../hooks/useWebSocket';
 import { setGlobalLoading } from '../../store/slices/uiSlice';
 import { setUser } from '../../store/slices/authSlice';
 
@@ -30,12 +29,9 @@ export default function AppLayout() {
       document.documentElement.classList.remove('dark');
     }
   }, [theme]);
-  const { connect } = useWebSocket();
 
   // Initialization
   useEffect(() => {
-    // connect(); // Initialize WebSocket for real-time updates
-    
     // Poll for notifications as fallback
     const interval = setInterval(() => {
       // dispatch(fetchUnreadCount());
@@ -45,7 +41,7 @@ export default function AppLayout() {
       clearInterval(interval);
       // disconnect(); 
     };
-  }, [dispatch, connect]);
+  }, [dispatch]);
 
   return (
     <div className="min-h-screen bg-app-bg flex transition-colors duration-300">

@@ -96,7 +96,6 @@ public class NotificationService {
         // Also send email
         sendNotificationEmail(user, title, body);
 
-        // TODO: Kafka/WebSocket implementation
         log.info("Notification saved and sent to user {}: {}", userId, body);
     }
 

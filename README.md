@@ -13,15 +13,14 @@ A modern digital banking platform with real-time transactions, loan management, 
 - **Transactions**: Deposit, withdrawal, fund transfer, transaction history, and filtering
 - **Beneficiaries**: Save and manage recurring recipients with verification
 - **Loans**: Loan product browsing, EMI calculator, and application tracking
-- **Notifications**: Real-time alerts using WebSocket
+- **Notifications**: Real-time alerts
 - **Admin Panel**: User management, transaction monitoring, and system statistics
 - **UI/UX**: Dark mode, responsive design, skeleton loaders, and custom toast notifications
 
 ### Backend
 - **Security**: Spring Security, JWT Authentication, Role-Based Access Control (RBAC), 2FA support, account lockout protection
 - **Core Banking**: ACID-compliant transactions, secure fund transfer with rollback support
-- **Performance**: Redis caching, connection pooling, pagination, and sorting
-- **Messaging**: Kafka-based notification events with email/SMS simulation
+- **Performance**: Connection pooling, pagination, and sorting
 - **API**: Swagger/OpenAPI documentation and centralized exception handling
 
 ---
@@ -31,9 +30,7 @@ A modern digital banking platform with real-time transactions, loan management, 
 | Layer | Technology |
 |-------|------------|
 | **Frontend** | React 19, Vite, Redux Toolkit, Tailwind CSS, Recharts, Framer Motion |
-| **Backend** | Spring Boot, MySQL, Redis, Kafka, JWT |
-| **Real-time** | STOMP WebSocket, SockJS |
-| **Deployment** | Docker Ready |
+| **Backend** | Spring Boot, MySQL, JWT |
 
 ---
 
@@ -41,21 +38,17 @@ A modern digital banking platform with real-time transactions, loan management, 
 
 ```text
 credixa-bank-application/
-├── credixa-frontend/
-│   ├── src/
-│   │   ├── api/
-│   │   ├── components/
-│   │   ├── hooks/
-│   │   ├── pages/
-│   │   ├── store/
-│   │   ├── utils/
-│   │   └── main.jsx
-│   ├── public/
-│   └── package.json
-└── mockup/
-    ├── API design.html
-    ├── SQL script.sql
-    └── System design.txt
+└── credixa-frontend/
+    ├── src/
+    │   ├── api/
+    │   ├── components/
+    │   ├── hooks/
+    │   ├── pages/
+    │   ├── store/
+    │   ├── utils/
+    │   └── main.jsx
+    ├── public/
+    └── package.json
 ```
 
 ---
@@ -207,7 +200,7 @@ Base URL:
 | GET | `/admin/stats` | System statistics |
 | GET | `/admin/transactions` | View all transactions |
 
-See **mockup/API design.html** for complete API documentation.
+See **API design.html** for complete API documentation.
 
 ---
 
@@ -224,15 +217,6 @@ The database includes the following tables:
 - `loans`
 - `notifications`
 
-See **mockup/SQL script.sql** for the complete database schema.
+See **SQL script.sql** for the complete database schema.
 
 ---
-
-## Environment Variables
-
-Create a `.env` file inside `credixa-frontend/`.
-
-```env
-VITE_API_BASE_URL=https://api.credixa.in/api/v1
-VITE_WS_URL=wss://api.credixa.in/ws
-```

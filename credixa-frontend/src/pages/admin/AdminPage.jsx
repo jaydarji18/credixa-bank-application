@@ -744,12 +744,11 @@ const AdminPage = () => {
                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
             >
                {[
-                 { label: 'API Version', value: 'v1.0.4-stable', icon: Cpu, color: 'text-primary-500' },
-                 { label: 'Database', value: 'MySQL 8.0.35', icon: Database, color: 'text-success-500' },
-                 { label: 'Cache Layer', value: 'Redis 7.2 Cloud', icon: Activity, color: 'text-danger-500' },
-                 { label: 'Spring Boot', value: '3.2.4 GA', icon: Server, color: 'text-secondary-500' },
-                 { label: 'WebSocket', value: 'STOMP Active', icon: Activity, color: 'text-warning-500' },
-                 { label: 'Last Deploy', value: 'April 17, 2026', icon: Clock, color: 'text-dark-400' },
+{ label: 'API Version', value: 'v1.0.4-stable', icon: Cpu, color: 'text-primary-500' },
+                  { label: 'Database', value: 'MySQL 8.0.35', icon: Database, color: 'text-success-500' },
+                  { label: 'Spring Boot', value: '3.2.4 GA', icon: Server, color: 'text-secondary-500' },
+                  { label: 'WebSocket', value: 'STOMP Active', icon: Activity, color: 'text-warning-500' },
+                  { label: 'Last Deploy', value: 'April 17, 2026', icon: Clock, color: 'text-dark-400' },
                ].map((item, i) => (
                  <div key={i} className="glass-card p-6 flex items-center gap-6">
                     <div className="w-12 h-12 rounded-2xl bg-dark-900 border border-white/5 flex items-center justify-center">
